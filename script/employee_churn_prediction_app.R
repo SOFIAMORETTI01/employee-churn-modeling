@@ -10,17 +10,20 @@ library(gridExtra)
 library(rlang)
 
 # Load pre-trained models and prediction results
-forward_model        <- readRDS("forward_model.rds")
-forward_pred         <- readRDS("forward_pred.rds")
-ridge_pred           <- readRDS("ridge_pred.rds")
-lasso_pred           <- readRDS("lasso_pred.rds")
-elastic_pred         <- readRDS("elastic_pred.rds")
-opt_tree_model       <- readRDS("opt_tree_model.rds")
-test_data            <- readRDS("test_data.rds")
-baseline_tree_model  <- readRDS("baseline_tree_model.rds")
-baseline_tree_pred   <- readRDS("baseline_tree_pred.rds")
-opt_tree_pred        <- readRDS("opt_tree_pred.rds")
-data                 <- readRDS("data.rds")
+forward_model        <- readRDS("models/forward_model.rds")
+forward_pred         <- readRDS("models/forward_pred.rds")
+ridge_pred           <- readRDS("models/ridge_pred.rds")
+lasso_pred           <- readRDS("models/lasso_pred.rds")
+elastic_pred         <- readRDS("models/elastic_pred.rds")
+opt_tree_model       <- readRDS("models/opt_tree_model.rds")
+baseline_tree_model  <- readRDS("models/baseline_tree_model.rds")
+baseline_tree_pred   <- readRDS("models/baseline_tree_pred.rds")
+opt_tree_pred        <- readRDS("models/opt_tree_pred.rds")
+test_data            <- readRDS("models/test_data.rds")
+
+# Final processed dataset
+data                 <- readRDS("data/data.rds")
+
 
 # Define User Interface
 ui <- navbarPage("Employee Churn - Predictive Modeling",
