@@ -5,7 +5,7 @@ The objective is to predict churn behavior and analyze key drivers using interpr
 
 The final output is a shiny dashboard that allows dynamic comparison across different modeling strategies.
 
-# 🔗 Access the dashboard online
+### 🔗 Access the dashboard online
 
 <a href="https://sofia-moretti.shinyapps.io/05_churn/" target="_blank">
   <img src="https://img.shields.io/badge/Launch-Dashboard-blue?style=for-the-badge&logo=R" alt="Launch Dashboard">
