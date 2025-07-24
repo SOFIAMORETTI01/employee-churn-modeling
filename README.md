@@ -27,19 +27,47 @@ The final output is a shiny dashboard that allows dynamic comparison across diff
 
 ### 📊 Models Explored
 
-Several supervised learning models were developed to predict employee churn:
-
 - **Stepwise Logistic Regression**  
-  A baseline model using a forward selection strategy to retain only the most relevant features based on statistical criteria.
+  A classic baseline model that uses forward feature selection to include only statistically significant variables. It’s interpretable and useful for understanding which features most influence churn.
 
 - **Regularized Logistic Regression**  
-  Different regularization techniques were tested to improve generalization and control multicollinearity:
-  - *Ridge Regression*: Shrinks all coefficients to reduce variance.
-  - *Lasso Regression*: Performs variable selection by reducing some coefficients to zero.
-  - *Elastic Net*: Combines both penalties for balanced performance.
+  Penalized models were used to improve generalization and control multicollinearity:
+  - **Ridge**: Shrinks all coefficients to reduce overfitting without removing features.
+  - **Lasso**: Forces some coefficients to zero, effectively performing feature selection.
+  - **Elastic Net**: Blends both penalties to balance feature selection and stability.
 
 - **Decision Trees**  
-  Simple interpretable models were first fitted, followed by an optimized version using cross-validation to tune complexity and prevent overfitting.
+  Captures non-linear patterns and interactions between features. A simple tree was compared to a fine-tuned version with cross-validation and hyperparameter optimization for better predictive power and structure clarity.
 
-All models were evaluated on unseen data using multiple performance metrics (e.g., Accuracy, AUC, KS, Precision, Recall), and their results were visualized through ROC curves and confusion matrices for comparative analysis.
+Each model was evaluated based on performance metrics, robustness, and ease of interpretation, balancing predictive accuracy with business understanding.
 
+---
+
+### 📈 Model Evaluation
+
+Models were evaluated on both training and test sets using metrics such as Accuracy, ROC Curve, Precision, and Recall. Confusion matrices and visualizations helped compare their real-world performance and interpretability.
+
+---
+
+### 🚀 Future Improvements
+
+- Try ensemble models (e.g., Random Forest) to improve accuracy.
+- Test different data splits and cross-validation strategies to ensure model stability.
+- Explore ensemble methods like Random Forest or Gradient Boosting.
+- Test non-linear models like Support Vector Machines (SVM) or k-Nearest Neighbors (k-NN).
+---
+
+## 🛠️ How to run locally
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/SOFIAMORETTI01/employee-churn-modeling.git
+   cd employee-churn-modeling
+
+   2. Open R or RStudio
+Make sure you're in the root directory of the project.
+
+2. **Run the scripts:**
+   ```bash
+   python script/anomaly_detection.py
+   streamlit run script/anomaly_detection_streamlit.py
