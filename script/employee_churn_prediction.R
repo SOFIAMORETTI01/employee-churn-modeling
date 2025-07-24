@@ -27,11 +27,8 @@ library(nortest)
 library(rattle)
 library(RColorBrewer)
 
-# Set working directory
-setwd("C:/Users/SMoretti/Downloads/Portfolio/05. Churn")
-
 # Load dataset
-data <- read_excel("employee_churn_database.xlsx", sheet = "Sheet1")
+data <- readxl::read_excel("data/employee_churn_database.xlsx", sheet = "Sheet1")
 
 head(data)
 summary(data)
@@ -97,7 +94,7 @@ create_descriptive_table <- function(data) {
   return(descriptive_table)
 }
 descriptive_table <- create_descriptive_table(data)
-write_xlsx(descriptive_table, "descriptive_table.xlsx")
+
 
 # Boxplot for each numeric variable
 
@@ -1163,28 +1160,28 @@ kable(metrics_comparison2, caption = "Comparison of Metrics between Train and Te
 
 
 # Save Forward Selection model and its predictions
-saveRDS(forward_model, "forward_model.rds")
+saveRDS(forward_model, "models/forward_model.rds")
 predictions <- predict(forward_model, newdata = test_data, type = "response")
 predictions <- predictions[1:length(test_data$left)]  
 saveRDS(predictions, "forward_pred.rds")
 
 # Save regularized model predictions
-saveRDS(ridge_pred, "ridge_pred.rds")
-saveRDS(lasso_pred, "lasso_pred.rds")
-saveRDS(elastic_pred, "elastic_pred.rds")
+saveRDS(ridge_pred, "models/ridge_pred.rds")
+saveRDS(lasso_pred, "models/lasso_pred.rds")
+saveRDS(elastic_pred, "models/elastic_pred.rds")
 
 # Save decision tree models
-saveRDS(tree_model, "baseline_tree_model.rds")
-saveRDS(tree_model_opt, "opt_tree_model.rds")
+saveRDS(tree_model, "models/baseline_tree_model.rds")
+saveRDS(tree_model_opt, "models/opt_tree_model.rds")
 
 # Save processed test dataset
-saveRDS(test_data, "test_data.rds")
+saveRDS(test_data, "models/test_data.rds")
 
 # Save predicted probabilities for tree models
 pred_prob_tree <- predict(tree_model, test_data, type = "prob")[, 2]
 pred_prob_tree_opt <- predict(tree_model_opt, test_data, type = "prob")[, 2]
-saveRDS(pred_prob_tree, "baseline_tree_pred.rds")
-saveRDS(pred_prob_tree_opt, "opt_tree_pred.rds")
+saveRDS(pred_prob_tree, "models/baseline_tree_pred.rds")
+saveRDS(pred_prob_tree_opt, "models/opt_tree_pred.rds")
 
 # Save final dataset with all modifications
-saveRDS(data, "data.rds")
+saveRDS(data, "data/data.rds")
