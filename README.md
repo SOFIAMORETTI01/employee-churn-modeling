@@ -11,6 +11,8 @@ The final output is a shiny dashboard that allows dynamic comparison across diff
   <img src="https://img.shields.io/badge/Launch-Dashboard-blue?style=for-the-badge&logo=R" alt="Launch Dashboard">
 </a>
 
+---
+
 ### 🧰 Tech Stack
 
 - **Language**: R  
