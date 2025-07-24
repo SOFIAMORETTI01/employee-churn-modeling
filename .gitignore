@@ -1,5 +1,7 @@
 .Rhistory
 .RData
 .Rproj.user/
+*.rds
+*.xlsx
 *.csv
 .DS_Store
