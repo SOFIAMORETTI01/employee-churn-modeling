@@ -10,3 +10,12 @@ The final output is a shiny dashboard that allows dynamic comparison across diff
 <a href="https://sofia-moretti.shinyapps.io/05_churn/" target="_blank">
   <img src="https://img.shields.io/badge/Launch-Dashboard-blue?style=for-the-badge&logo=R" alt="Launch Dashboard">
 </a>
+
+### 🧰 Tech Stack
+
+- **Language**: R  
+- **Modeling**: `glmnet`, `rpart`, `pROC`, `ROCR`  
+- **Data Manipulation & Visualization**: `dplyr`, `ggplot2`, `gridExtra`  
+- **Deployment**: `shiny`  
+- **Reproducibility**: `readRDS`, estructura modular con carpetas `script/`, `models/`, `data/`
+
