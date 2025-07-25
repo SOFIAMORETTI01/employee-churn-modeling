@@ -45,8 +45,12 @@ Each model was evaluated based on performance metrics, robustness, and ease of i
 ### 📈 Model evaluation
 
 Models were evaluated on both training and test sets using metrics such as Accuracy, ROC Curve, Precision, and Recall. 
+
 Confusion matrices and visualizations helped compare their real-world performance and interpretability.
+
+
 While regression models are valuable for their interpretability and stability, decision trees proved to be the most effective choice for predicting employee churn. 
+
 They not only achieved the highest performance across metrics but also captured complex, non-linear patterns in the data, making them more suitable for this problem.
 
 ---
