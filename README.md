@@ -64,10 +64,19 @@ Models were evaluated on both training and test sets using metrics such as Accur
    git clone https://github.com/SOFIAMORETTI01/employee-churn-modeling.git
    cd employee-churn-modeling
 
-   2. Open R or RStudio
+2. **Open R or RStudio**
 Make sure you're in the root directory of the project.
 
-2. **Run the scripts:**
+3. **Install required packages**
+   Install all required libraries using:
    ```bash
-   python script/anomaly_detection.py
-   streamlit run script/anomaly_detection_streamlit.py
+   packages <- c("readxl", "moments", "corrplot", "ggplot2", "dplyr", "gridExtra",
+              "caret", "MASS", "car", "polycor", "DescTools", "reshape2", "pROC",
+              "glmnet", "knitr", "tidyr", "randomForest", "ROCR", "rpart",
+              "rpart.plot", "MLmetrics", "writexl", "lmtest", "nortest", "rattle",
+              "RColorBrewer")
+   install.packages(setdiff(packages, installed.packages()[,"Package"]))
+
+4. **Run the code**
+
+
