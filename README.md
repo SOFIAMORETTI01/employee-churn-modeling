@@ -57,7 +57,7 @@ Models were evaluated on both training and test sets using metrics such as Accur
   
 ---
 
-## 🛠️ How to run locally
+### 🛠️ How to run locally
 
 1. **Clone this repository:**
 ```bash
