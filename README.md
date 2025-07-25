@@ -25,7 +25,7 @@ The final output is a shiny dashboard that allows dynamic comparison across diff
 
 ---
 
-### 📊 Models Explored
+### 📊 Models explored
 
 - **Stepwise Logistic Regression**  
   A classic baseline model that uses forward feature selection to include only statistically significant variables. It’s interpretable and useful for understanding which features most influence churn.
@@ -43,13 +43,13 @@ Each model was evaluated based on performance metrics, robustness, and ease of i
 
 ---
 
-### 📈 Model Evaluation
+### 📈 Model evaluation
 
 Models were evaluated on both training and test sets using metrics such as Accuracy, ROC Curve, Precision, and Recall. Confusion matrices and visualizations helped compare their real-world performance and interpretability.
 
 ---
 
-### 🚀 Future Improvements
+### 🚀 Future improvements
 
 - Try ensemble models (e.g., Random Forest) to improve accuracy.
 - Test different data splits and cross-validation strategies to ensure model stability.
