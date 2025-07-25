@@ -77,6 +77,9 @@ Make sure you're in the root directory of the project.
               "RColorBrewer")
    install.packages(setdiff(packages, installed.packages()[,"Package"]))
 
-4. **Run the code**
+4. **Run the scripts**
+```bash
+python script/employee-churn-prediction.py
+python script/employee-churn-prediction_app.py
 
 
