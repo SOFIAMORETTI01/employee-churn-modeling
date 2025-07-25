@@ -55,29 +55,31 @@ Models were evaluated on both training and test sets using metrics such as Accur
 - Test different data splits and cross-validation strategies to ensure model stability.
 - Explore ensemble methods like Random Forest or Gradient Boosting.
 - Test non-linear models like Support Vector Machines (SVM) or k-Nearest Neighbors (k-NN).
+  
 ---
 
 ## 🛠️ How to run locally
 
 1. **Clone this repository:**
-   ```bash
-   git clone https://github.com/SOFIAMORETTI01/employee-churn-modeling.git
-   cd employee-churn-modeling
+```bash
+git clone https://github.com/SOFIAMORETTI01/employee-churn-modeling.git
+cd employee-churn-modeling
 
-2. **Open R or RStudio**
+2. **Open RStudio**
+   
 Make sure you're in the root directory of the project.
 
-3. **Install required packages**
-   Install all required libraries using:
-   ```bash
-   packages <- c("readxl", "moments", "corrplot", "ggplot2", "dplyr", "gridExtra",
+4. **Install required packages**
+Install all required libraries using:
+```bash
+packages <- c("readxl", "moments", "corrplot", "ggplot2", "dplyr", "gridExtra",
               "caret", "MASS", "car", "polycor", "DescTools", "reshape2", "pROC",
               "glmnet", "knitr", "tidyr", "randomForest", "ROCR", "rpart",
               "rpart.plot", "MLmetrics", "writexl", "lmtest", "nortest", "rattle",
               "RColorBrewer")
-   install.packages(setdiff(packages, installed.packages()[,"Package"]))
+install.packages(setdiff(packages, installed.packages()[,"Package"]))
 
-4. **Run the scripts**
+5. **Run the scripts**
 ```bash
 python script/employee-churn-prediction.py
 python script/employee-churn-prediction_app.py
