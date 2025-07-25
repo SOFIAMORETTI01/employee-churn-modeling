@@ -19,10 +19,9 @@ The final output is a shiny dashboard that allows dynamic comparison across diff
 
 - **Language**: R  
 - **Modeling**: `glmnet`, `rpart`, `pROC`, `ROCR`  
-- **Data Manipulation & Visualization**: `dplyr`, `ggplot2`, `gridExtra`  
-- **Deployment**: `shiny`  
-- **Reproducibility**: `readRDS`, estructura modular con carpetas `script/`, `models/`, `data/`
-
+- **Data manipulation & visualization**: `dplyr`, `ggplot2`, `gridExtra`  
+- **Deployment**: `shiny`
+  
 ---
 
 ### 📊 Models explored
