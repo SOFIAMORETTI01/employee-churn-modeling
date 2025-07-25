@@ -42,7 +42,7 @@ Each model was evaluated based on performance metrics, robustness, and ease of i
 
 ---
 
-📈 **Model Evaluation**
+### 📈 Models evaluation
 
 Models were evaluated on both training and test sets using key metrics like **Accuracy**, **ROC Curve**, **Precision**, **Recall**, and **AUC**.
 
