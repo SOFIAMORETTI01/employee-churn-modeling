@@ -67,12 +67,12 @@ Models were evaluated on both training and test sets using key metrics like **Ac
 ```bash
 git clone https://github.com/SOFIAMORETTI01/employee-churn-modeling.git
 cd employee-churn-modeling
-
+```
 2. **Open RStudio**
-   
+```bash
 Make sure you're in the root directory of the project.
-
-4. **Install required packages**
+```
+3. **Install required packages**
 Install all required libraries using:
 ```bash
 packages <- c("readxl", "moments", "corrplot", "ggplot2", "dplyr", "gridExtra",
@@ -81,8 +81,8 @@ packages <- c("readxl", "moments", "corrplot", "ggplot2", "dplyr", "gridExtra",
               "rpart.plot", "MLmetrics", "writexl", "lmtest", "nortest", "rattle",
               "RColorBrewer")
 install.packages(setdiff(packages, installed.packages()[,"Package"]))
-
-5. **Run the scripts**
+```
+4. **Run the scripts**
 ```bash
 python script/employee-churn-prediction.py
 python script/employee-churn-prediction_app.py
