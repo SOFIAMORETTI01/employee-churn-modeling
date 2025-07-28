@@ -162,8 +162,8 @@ ui <- navbarPage("Employee Churn - Predictive Modeling",
                                            column(6, uiOutput("conf_matrix_elastic"))
                                          ),
                                          fluidRow(
-                                           column(6, uiOutput("conf_matrix_arbol")),
-                                           column(6, uiOutput("conf_matrix_arbol_modif"))
+                                           column(6, uiOutput("conf_matrix_tree")),
+                                           column(6, uiOutput("conf_matrix_tree_modif"))
                                          )
                                   )
                                 ),
@@ -219,7 +219,7 @@ server <- function(input, output) {
     coef_df
   }, striped = TRUE, bordered = TRUE, spacing = "s")
   
-  output$imp_arbol <- renderTable({
+  output$imp_tree <- renderTable({
     imp <- baseline_tree_model_modif$variable.importance
     imp_df <- data.frame(Variable = names(imp), Importance = round(as.numeric(imp), 4))
     imp_df <- imp_df[order(-imp_df$Importance), ]
@@ -234,7 +234,7 @@ server <- function(input, output) {
     lines(roc(real, elastic_pred), col = "#646199", lwd = 2)
     lines.roc(real, baseline_tree_pred, col = "#c1bfec", lwd = 2)
     lines.roc(real, opt_tree_pred, col = "#aeadc1", lwd = 2)
-    legend("bottomright", legend = c("Forward", "Ridge", "Lasso", "Elastic Net", "Árbol", "Árbol Optimizado"),
+    legend("bottomright", legend = c("Forward", "Ridge", "Lasso", "Elastic Net", "Baseline Tree", "Opt. Tree"),
            col = c("#429ed6", "#5f58ee", "#251eb6", "#646199", "#c1bfec", "#aeadc1"), lwd = 2, cex = 0.8)
   })
   
@@ -278,8 +278,8 @@ server <- function(input, output) {
   output$conf_matrix_ridge <- renderUI({ render_conf_matrix(ridge_pred, "Logistic Regression + Ridge") })
   output$conf_matrix_lasso <- renderUI({ render_conf_matrix(lasso_pred, "Logistic Regression + Lasso") })
   output$conf_matrix_elastic <- renderUI({ render_conf_matrix(elastic_pred, "Logistic Regression + Elastic Net") })
-  output$conf_matrix_arbol <- renderUI({ render_conf_matrix(baseline_tree_pred, "Baseline Decision Tree") })
-  output$conf_matrix_arbol_modif <- renderUI({ render_conf_matrix(opt_tree_pred, "Optimized Tree Model") })
+  output$conf_matrix_tree <- renderUI({ render_conf_matrix(baseline_tree_pred, "Baseline Decision Tree") })
+  output$conf_matrix_tree_modif <- renderUI({ render_conf_matrix(opt_tree_pred, "Optimized Tree Model") })
   output$churn_plot <- renderPlot({
     # Asegurar que left esté en formato factor con niveles correctos
     data$left <- as.character(data$left)
