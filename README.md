@@ -38,17 +38,15 @@ The final output is a shiny dashboard that allows dynamic comparison across diff
 - **Decision Trees**  
   Captures non-linear patterns and interactions between features. A simple tree was compared to a fine-tuned version with cross-validation and hyperparameter optimization for better predictive power and structure clarity.
 
-Each model was evaluated based on performance metrics, robustness, and ease of interpretation, balancing predictive accuracy with business understanding.
-
 ---
 
 ### 📈 Models evaluation
-
-Models were evaluated on both training and test sets using key metrics like **Accuracy**, **ROC Curve**, **Precision**, **Recall**, and **AUC**.
+Each model was evaluated based on performance metrics, robustness, and ease of interpretation, balancing predictive accuracy with business understanding.
+They were evaluated on both training and test sets using key metrics like Accuracy, ROC Curve, Precision, Recall, and AUC.
 
 📊 Confusion matrices and visual comparisons helped assess each model's strengths in real-world performance and interpretability.
 
-🌳 While regression models offer great transparency and stability, **decision trees outperformed them**, capturing non-linear relationships and uncovering deeper patterns — making them the top choice for predicting employee churn.
+🌳 While regression models offer great transparency and stability, decision trees outperformed them, capturing non-linear relationships and uncovering deeper patterns — making them the top choice for predicting employee churn.
 
 ---
 
